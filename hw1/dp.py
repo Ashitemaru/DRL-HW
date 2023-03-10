@@ -20,25 +20,25 @@ register(
 For policy_evaluation, policy_improvement, policy_iteration and value_iteration,
 the parameters P, nS, nA, gamma are defined as follows:
 
-	P: nested dictionary
-		From gym.core.Environment
-		For each pair of states in [0, nS - 1] and actions in [0, nA - 1], P[state][action] is a list of
-		tuple of the form (p_trans, next_state, reward, terminal) where
-			- p_trans: float
-				the transition probability of transitioning from "state" to "next_state" with "action"
-			- next_state: int
-				denotes the state we transition to (in range [0, nS - 1])
-			- reward: int
-				either 0 or 1, the reward for transitioning from "state" to
-				"next_state" with "action"
-			- terminal: bool
-			  True when "next_state" is a terminal state (hole or goal), False otherwise
-	nS: int
-		number of states in the environment
-	nA: int
-		number of actions in the environment
-	gamma: float
-		Discount factor. Number in range [0, 1)
+    P: nested dictionary
+        From gym.core.Environment
+        For each pair of states in [0, nS - 1] and actions in [0, nA - 1], P[state][action] is a list of
+        tuple of the form (p_trans, next_state, reward, terminal) where
+            - p_trans: float
+                the transition probability of transitioning from "state" to "next_state" with "action"
+            - next_state: int
+                denotes the state we transition to (in range [0, nS - 1])
+            - reward: int
+                either 0 or 1, the reward for transitioning from "state" to
+                "next_state" with "action"
+            - terminal: bool
+              True when "next_state" is a terminal state (hole or goal), False otherwise
+    nS: int
+        number of states in the environment
+    nA: int
+        number of actions in the environment
+    gamma: float
+        Discount factor. Number in range [0, 1)
 """
 
 def policy_evaluation(P, nS, nA, policy, gamma=0.9, eps=1e-3):

@@ -7,12 +7,12 @@ from gymnasium.wrappers import TimeLimit
 For Q_learning, Sarsa
 the parameters nS, nA, gamma are defined as follows:
 
-	nS: int
-		number of states in the environment
-	nA: int
-		number of actions in the environment
-	gamma: float
-		Discount factor. Number in range [0, 1)
+    nS: int
+        number of states in the environment
+    nA: int
+        number of actions in the environment
+    gamma: float
+        Discount factor. Number in range [0, 1)
     alpha: float
         Learning step rate for Q-learning and Sarsa
     state: int
